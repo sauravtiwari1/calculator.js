@@ -5,10 +5,17 @@
   box-sizing: inherit;
 }
 
+:root{
+    --background-color1: #ccc;
+    --background-color2: #fff;
+    --icon-color: #333;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
+    background-color: var(--background-color1);
 }
 
 body {
@@ -41,7 +48,7 @@ body {
         font-family: 'Orbitron', sans-serif;
         font-size: 3rem;
         padding: 1rem;
-        background-color: #fff;
+        background-color: var(--background-color2);
         width: 20rem;
         height: 7rem;
         margin-bottom: 1rem;
@@ -52,7 +59,7 @@ body {
     .clear {
         font-size: 1.6rem;
         background-color: #e74c3c;
-        color: #fff;
+        color: var(--background-color2);
         border: none;
         border-radius: 5px;
         padding: 10px 15px;
@@ -69,9 +76,9 @@ body {
     .number,
     .operator {
         font-size: 2rem;
-        background-color: #fff;
+        background-color: var(--background-color2);
         color: #333;
-        border: 1px solid #ccc;
+        border: 1px solid var(--background-color1);
         padding: 10px 15px;
         cursor: pointer;
         width: 80%;
@@ -102,14 +109,14 @@ footer{
     font-size: 2rem;
     font-weight: 590;
     text-align: center;
-    color:#333;
+    color:var(--icon-color);
 }
 
 footer a .fa-github {
     font-size: 2rem;
     text-decoration: none;
     transition: transform 0.3s;
-    color: #333;
+    color: var(--icon-color);
 }
 
 footer a .fa-github:hover {
