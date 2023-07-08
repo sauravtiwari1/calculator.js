@@ -92,10 +92,13 @@ body {
 /* FOOTER */
 
 footer{
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: fit-content;
+    height: 80px;
+    width: 100%;
     font-size: 2rem;
     font-weight: 590;
     text-align: center;
