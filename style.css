@@ -123,7 +123,9 @@ body {
     }
     
     .number,
-    .operator {
+    .operator,
+    .equal,
+    .decimal {
         font-size: 2rem;
         background-color: var(--background-color2);
         color: #333;
@@ -134,12 +136,27 @@ body {
         margin-right: 1.3rem;
     }
 
+    .number,
+    .decimal{
+        border:0.7px solid black;
+    }
+
+    .operator{
+        border:0.7px solid #bdb000;
+    }
+
+    .equal{
+        border:2.6px solid green;
+    }
+
     .remaining-rows :last-child{
         margin-right: unset;
     }
     
     .number:hover,
-    .operator:hover {
+    .operator:hover,
+    .equal:hover,
+    .decimal:hover{
         background-color: var(--bg-hover);
     }
 
