@@ -66,6 +66,10 @@ body {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     
+    .clear-delete {
+        display: flex;
+        align-items: center;
+    }
 
     .clear,
     .delete {
@@ -76,6 +80,7 @@ body {
         padding: 10px 15px;
         cursor: pointer;
         height: 5rem;
+        flex: 1;
         margin-bottom: 1rem;
     }
 
