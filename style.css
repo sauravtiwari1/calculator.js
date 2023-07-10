@@ -46,6 +46,7 @@ body {
         width: 400px;
         background-color: var(--calc-bg);
         border-radius: 10px;
+        border: 2px rgba(0, 0, 0, 0.71) solid;
         padding:20px;
     }
     
