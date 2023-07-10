@@ -10,33 +10,39 @@
     --background-color1: #ccc;
     --background-color2: #fff;
     --icon-color: #333;
+    --delete-color:rgb(54, 113, 169);
 }
 
 html {
+    position: relative;
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
     background-color: var(--background-color1);
+    min-height: 100%;
 }
 
 body {
     font-family: Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    margin-bottom: 100px;
 }
 /* CALCULATOR */
 
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+        min-height: 500px;
+        padding: 10px;
+        margin-top: 50px;
+    }
+
     .calculator {
-        max-width: 400px;
+        width: 400px;
         background-color: #f4f4f4;
         border-radius: 10px;
-        padding: 20px;
+        padding:20px;
     }
     
     h1 {
@@ -49,29 +55,43 @@ body {
     .screen {
         font-family: 'Orbitron', sans-serif;
         font-size: 3rem;
-        padding: 1rem;
+        padding: 1rem 2rem;
         background-color: var(--background-color2);
-        width: 20rem;
-        height: 7rem;
-        margin-bottom: 1rem;
+        height: 8rem;
+        word-wrap: break-word;
+        word-break: break-all;
+        margin: 0 auto 1rem auto;
         text-align: right;
+        border:1px solid rgba(238, 130, 238, 0.67);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     
-    .clear {
+
+    .clear,
+    .delete {
         font-size: 1.6rem;
-        background-color: #e74c3c;
         color: var(--background-color2);
         border: none;
         border-radius: 5px;
         padding: 10px 15px;
         cursor: pointer;
+        height: 5rem;
         margin-bottom: 1rem;
+    }
+
+    .clear{
+        margin-right: 1.7rem;
+        background-color: #e74c3c;
+    }
+
+    .delete{
+        background-color:var(--delete-color);
     }
     
     .remaining-rows {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        gap:0.5rem;
         margin-bottom: 10px;
     }
     
@@ -101,12 +121,13 @@ body {
 /* FOOTER */
 
 footer{
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    /* height: 80px; */
     width: 100%;
     font-size: 2rem;
     font-weight: 590;
