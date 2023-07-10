@@ -9,8 +9,12 @@
 :root{
     --background-color1: #ccc;
     --background-color2: #fff;
+    --calc-bg:#f4f4f4;
     --icon-color: #333;
     --delete-color:rgb(54, 113, 169);
+    --bg-hover: #e8e8e8;
+    --clear-hover: rgba(171, 13, 13, 0.765);
+    --delete-hover: #0f4867b6;
 }
 
 html {
@@ -40,7 +44,7 @@ body {
 
     .calculator {
         width: 400px;
-        background-color: #f4f4f4;
+        background-color: var(--calc-bg);
         border-radius: 10px;
         padding:20px;
     }
@@ -92,6 +96,13 @@ body {
     .delete{
         background-color:var(--delete-color);
     }
+
+    .clear:hover{
+        background-color: var(--clear-hover);
+    }
+    .delete:hover{
+        background-color: var(--delete-hover);
+    }
     
     .remaining-rows {
         display: flex;
@@ -118,7 +129,7 @@ body {
     
     .number:hover,
     .operator:hover {
-        background-color: #e8e8e8;
+        background-color: var(--bg-hover);
     }
 
 /* END-CALCULATOR */
